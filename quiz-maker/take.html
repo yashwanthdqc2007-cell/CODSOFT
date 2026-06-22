@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Take Quiz | CareerGo Quizzes</title>
+  <meta name="description" content="Attempt an interactive quiz challenge on CareerGo. Answer within timed limits, receive instant correct/wrong feedbacks and explanations.">
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- HEADER NAVBAR -->
+  <header>
+    <div class="container nav-container">
+      <a href="index.html" class="logo-wrapper">
+        <div class="logo-icon">⚡</div>
+        <span>CareerGo<span style="color: var(--text-main);">Quizzes</span></span>
+      </a>
+      
+      <nav class="nav-menu" id="nav-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="browse.html" class="nav-link">Browse Quizzes</a>
+        <a href="create.html" class="nav-link">Create Quiz</a>
+        <a href="dashboard.html" class="nav-link">Dashboard</a>
+      </nav>
+
+      <div class="nav-actions" id="nav-actions">
+        <button class="btn-icon">🌓</button>
+      </div>
+
+      <div class="mobile-nav-toggle" id="mobile-nav-toggle">☰</div>
+    </div>
+  </header>
+
+  <!-- INTERACTIVE TAKE VIEW CONTAINER -->
+  <main class="container section-padding" id="take-container" style="padding-top: 40px;">
+    <!-- Rendered dynamically by take.js -->
+    <div style="max-width: 600px; margin: 40px auto; text-align: center;">
+      <div class="loading-shimmer" style="width: 100%; height: 350px; border-radius: var(--radius-lg);"></div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <a href="index.html" class="logo-wrapper footer-logo">
+          <div class="logo-icon">⚡</div>
+          <span>CareerGo<span style="color: white;">Quizzes</span></span>
+        </a>
+        <p class="footer-desc">
+          CareerGo Quizzes is a modern interactive trivia platform for testing candidates, studying materials, or simply competing with peers.
+        </p>
+        <div class="social-links">
+          <a href="#" class="social-btn">🌐</a>
+          <a href="#" class="social-btn">🐦</a>
+          <a href="#" class="social-btn">🐙</a>
+        </div>
+      </div>
+      
+      <div>
+        <h4 class="footer-title">Platform</h4>
+        <ul class="footer-links">
+          <li><a href="browse.html">Browse Quizzes</a></li>
+          <li><a href="create.html">Create Quiz</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-title">Categories</h4>
+        <ul class="footer-links">
+          <li><a href="browse.html?category=Tech">Tech / Programming</a></li>
+          <li><a href="browse.html?category=Science">Science & Space</a></li>
+          <li><a href="browse.html?category=History">World History</a></li>
+          <li><a href="browse.html?category=General">General Knowledge</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-title">Stay Updated</h4>
+        <p class="footer-desc" style="font-size: 0.85rem; margin-bottom: 16px;">Subscribe to receive newsletter alerts about new quizzes and feature upgrades.</p>
+        <form class="newsletter-form" onsubmit="event.preventDefault(); window.showToast('Subscribed successfully!', 'success');">
+          <input type="email" placeholder="Your email address" class="newsletter-input" required>
+          <button type="submit" class="newsletter-btn">Join</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        &copy; 2026 CareerGo Quizzes. Built with Antigravity for modern web evaluation.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/app.js"></script>
+  <script src="js/take.js"></script>
+</body>
+</html>

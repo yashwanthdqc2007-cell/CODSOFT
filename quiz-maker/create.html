@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create a Quiz | CareerGo Quizzes</title>
+  <meta name="description" content="Design a customized online quiz assessment on CareerGo. Write questions, specify correct answers, set countdown timers, and share codes with candidates.">
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body class="auth-required">
+
+  <!-- HEADER NAVBAR -->
+  <header>
+    <div class="container nav-container">
+      <a href="index.html" class="logo-wrapper">
+        <div class="logo-icon">⚡</div>
+        <span>CareerGo<span style="color: var(--text-main);">Quizzes</span></span>
+      </a>
+      
+      <nav class="nav-menu" id="nav-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="browse.html" class="nav-link">Browse Quizzes</a>
+        <a href="create.html" class="nav-link active">Create Quiz</a>
+        <a href="dashboard.html" class="nav-link">Dashboard</a>
+      </nav>
+
+      <div class="nav-actions" id="nav-actions">
+        <button class="btn-icon">🌓</button>
+      </div>
+
+      <div class="mobile-nav-toggle" id="mobile-nav-toggle">☰</div>
+    </div>
+  </header>
+
+  <!-- WIZARD MAIN VIEW -->
+  <main class="container section-padding" style="max-width: 850px; padding-top: 40px;" id="creator-wizard-container">
+    
+    <!-- Step Indicators Header -->
+    <div class="wizard-header">
+      <div>
+        <h1 style="font-size: 2rem; font-weight: 800;">Quiz Creator</h1>
+        <p class="text-muted" style="font-size: 0.92rem;">Design and share your customized knowledge test.</p>
+      </div>
+      
+      <div class="wizard-steps">
+        <div class="step-indicator active">
+          <div class="step-number">1</div>
+          <span>Info</span>
+        </div>
+        <div class="step-indicator">
+          <div class="step-number">2</div>
+          <span>Questions</span>
+        </div>
+        <div class="step-indicator">
+          <div class="step-number">3</div>
+          <span>Review</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP 1 PANEL: QUIZ INFORMATION -->
+    <div class="wizard-panel active" id="panel-step-1">
+      <div class="table-container" style="padding: 32px;">
+        <h3 style="margin-bottom: 24px; border-bottom: 1px solid var(--border); padding-bottom: 12px;">Step 1: General Details</h3>
+        
+        <div class="form-group">
+          <label for="quiz-title-input">Quiz Title</label>
+          <input type="text" id="quiz-title-input" class="form-control" placeholder="e.g. Intermediate JavaScript Scoping" maxlength="60" required>
+        </div>
+
+        <div class="form-group">
+          <label for="quiz-desc-input">Short Description</label>
+          <textarea id="quiz-desc-input" class="form-control" placeholder="Provide a brief summary of what this quiz tests, who it targets, and what concepts it covers." maxlength="250" required></textarea>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="quiz-category-select">Category</label>
+            <select id="quiz-category-select" class="form-control">
+              <option value="General">General Knowledge</option>
+              <option value="Tech" selected>Web & Tech</option>
+              <option value="Science">Science & Space</option>
+              <option value="History">World History</option>
+              <option value="Sports">Sports</option>
+              <option value="Pop Culture">Pop Culture</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="quiz-difficulty-select">Difficulty Level</label>
+            <select id="quiz-difficulty-select" class="form-control">
+              <option value="Easy">Easy</option>
+              <option value="Medium" selected>Medium</option>
+              <option value="Hard">Hard</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group" style="max-width: 380px;">
+          <label for="quiz-time-select">Question Timer Constraint</label>
+          <select id="quiz-time-select" class="form-control">
+            <option value="0">No Time Limit</option>
+            <option value="10">10 Seconds per Question</option>
+            <option value="15">15 Seconds per Question</option>
+            <option value="30" selected>30 Seconds per Question</option>
+            <option value="45">45 Seconds per Question</option>
+            <option value="60">60 Seconds per Question</option>
+          </select>
+        </div>
+
+        <!-- Custom Visual Pickers -->
+        <div class="visual-pickers" style="margin-top: 24px; border-top: 1px solid var(--border); padding-top: 24px;">
+          <div class="picker-group">
+            <label>Card Thumbnail Color</label>
+            <div class="palette-grid">
+              <div class="palette-color selected" data-color="#3b82f6" style="background-color: #3b82f6;"></div>
+              <div class="palette-color" data-color="#7c3aed" style="background-color: #7c3aed;"></div>
+              <div class="palette-color" data-color="#10b981" style="background-color: #10b981;"></div>
+              <div class="palette-color" data-color="#f59e0b" style="background-color: #f59e0b;"></div>
+              <div class="palette-color" data-color="#ec4899" style="background-color: #ec4899;"></div>
+              <div class="palette-color" data-color="#ef4444" style="background-color: #ef4444;"></div>
+            </div>
+          </div>
+          
+          <div class="picker-group">
+            <label>Card Thumbnail Emoji</label>
+            <div class="emoji-grid">
+              <button class="emoji-select-btn selected" data-emoji="🧠">🧠</button>
+              <button class="emoji-select-btn" data-emoji="💻">💻</button>
+              <button class="emoji-select-btn" data-emoji="🔬">🔬</button>
+              <button class="emoji-select-btn" data-emoji="🏛️">🏛️</button>
+              <button class="emoji-select-btn" data-emoji="⚽">⚽</button>
+              <button class="emoji-select-btn" data-emoji="🍿">🍿</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP 2 PANEL: QUESTION BUILDER -->
+    <div class="wizard-panel" id="panel-step-2">
+      <div id="questions-list-container" class="questions-list">
+        <!-- Injected question blocks by javascript -->
+      </div>
+      
+      <button id="add-question-btn" class="btn btn-secondary" style="width: 100%; justify-content: center; gap: 8px;">
+        ➕ Add Another Question
+      </button>
+    </div>
+
+    <!-- STEP 3 PANEL: REVIEW & SUMMARIZE -->
+    <div class="wizard-panel" id="panel-step-3">
+      <div class="table-container" style="padding: 32px;" id="review-summary-container">
+        <!-- Rendered summary details by javascript -->
+      </div>
+    </div>
+
+    <!-- Wizard Action Buttons Footer -->
+    <div class="wizard-actions">
+      <button id="prev-step-btn" class="btn btn-secondary" style="visibility: hidden;">Back</button>
+      <button id="next-step-btn" class="btn btn-primary">Next: Questions</button>
+    </div>
+
+  </main>
+
+  <!-- SHARE CODE DIALOG MODAL -->
+  <div class="modal-overlay" id="publish-modal">
+    <div class="modal-content">
+      <div class="modal-icon">🎉</div>
+      <h2 class="modal-title">Quiz Published!</h2>
+      <p class="modal-desc">Your quiz has been saved and is live. Share the code below with your candidates to let them take it.</p>
+      
+      <div class="modal-code-box" id="modal-share-code">
+        <!-- Injected share code by javascript -->
+      </div>
+      
+      <button id="modal-close-btn" class="btn btn-primary" style="width: 100%; justify-content: center;">Go to Dashboard</button>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <a href="index.html" class="logo-wrapper footer-logo">
+          <div class="logo-icon">⚡</div>
+          <span>CareerGo<span style="color: white;">Quizzes</span></span>
+        </a>
+        <p class="footer-desc">
+          CareerGo Quizzes is a modern interactive trivia platform for testing candidates, studying materials, or simply competing with peers.
+        </p>
+        <div class="social-links">
+          <a href="#" class="social-btn">🌐</a>
+          <a href="#" class="social-btn">🐦</a>
+          <a href="#" class="social-btn">🐙</a>
+        </div>
+      </div>
+      
+      <div>
+        <h4 class="footer-title">Platform</h4>
+        <ul class="footer-links">
+          <li><a href="browse.html">Browse Quizzes</a></li>
+          <li><a href="create.html">Create Quiz</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-title">Categories</h4>
+        <ul class="footer-links">
+          <li><a href="browse.html?category=Tech">Tech / Programming</a></li>
+          <li><a href="browse.html?category=Science">Science & Space</a></li>
+          <li><a href="browse.html?category=History">World History</a></li>
+          <li><a href="browse.html?category=General">General Knowledge</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-title">Stay Updated</h4>
+        <p class="footer-desc" style="font-size: 0.85rem; margin-bottom: 16px;">Subscribe to receive newsletter alerts about new quizzes and feature upgrades.</p>
+        <form class="newsletter-form" onsubmit="event.preventDefault(); window.showToast('Subscribed successfully!', 'success');">
+          <input type="email" placeholder="Your email address" class="newsletter-input" required>
+          <button type="submit" class="newsletter-btn">Join</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        &copy; 2026 CareerGo Quizzes. Built with Antigravity for modern web evaluation.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/app.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,416 @@
+[
+  {
+    "id": "quiz-1",
+    "creatorId": "admin",
+    "creatorName": "CareerGo Team",
+    "title": "General Knowledge Challenge",
+    "description": "Test your knowledge across a wide variety of topics including geography, literature, science, and world trivia. A perfect starting point for trivia lovers!",
+    "category": "General",
+    "difficulty": "Medium",
+    "thumbnailEmoji": "🧠",
+    "thumbnailColor": "#3b82f6",
+    "timeLimit": 30,
+    "playsCount": 345,
+    "averageScore": 3.8,
+    "dateCreated": "2026-06-01T08:00:00.000Z",
+    "featured": true,
+    "questions": [
+      {
+        "id": "q1-1",
+        "text": "Which country is home to the Great Barrier Reef?",
+        "options": ["Indonesia", "Australia", "New Zealand", "South Africa"],
+        "correctOption": "B",
+        "explanation": "The Great Barrier Reef is the world's largest coral reef system, located in the Coral Sea, off the coast of Queensland, Australia."
+      },
+      {
+        "id": "q1-2",
+        "text": "Who wrote the famous play 'Romeo and Juliet'?",
+        "options": ["Geoffrey Chaucer", "Charles Dickens", "William Shakespeare", "Jane Austen"],
+        "correctOption": "C",
+        "explanation": "Romeo and Juliet is a tragedy written by William Shakespeare early in his career, about two young Italian star-crossed lovers."
+      },
+      {
+        "id": "q1-3",
+        "text": "What is the capital city of Japan?",
+        "options": ["Kyoto", "Osaka", "Hiroshima", "Tokyo"],
+        "correctOption": "D",
+        "explanation": "Tokyo is the capital and most populous city of Japan, serving as the country's economic and cultural hub."
+      },
+      {
+        "id": "q1-4",
+        "text": "Which gas do plants absorb from the atmosphere for photosynthesis?",
+        "options": ["Oxygen", "Carbon Dioxide", "Nitrogen", "Hydrogen"],
+        "correctOption": "B",
+        "explanation": "Plants absorb Carbon Dioxide (CO2) from the air, combining it with water and sunlight to make glucose and release oxygen."
+      },
+      {
+        "id": "q1-5",
+        "text": "What is the smallest ocean in the world?",
+        "options": ["Indian Ocean", "Pacific Ocean", "Arctic Ocean", "Atlantic Ocean"],
+        "correctOption": "C",
+        "explanation": "The Arctic Ocean is the smallest and shallowest of the world's five major oceans, surrounding the North Pole."
+      }
+    ]
+  },
+  {
+    "id": "quiz-2",
+    "creatorId": "admin",
+    "creatorName": "CareerGo Team",
+    "title": "Web Development Basics",
+    "description": "Assess your basic understanding of frontend web development. Includes questions on HTML structure, CSS styling rules, and basic JavaScript triggers.",
+    "category": "Tech",
+    "difficulty": "Easy",
+    "thumbnailEmoji": "💻",
+    "thumbnailColor": "#7c3aed",
+    "timeLimit": 15,
+    "playsCount": 421,
+    "averageScore": 4.2,
+    "dateCreated": "2026-06-03T10:00:00.000Z",
+    "featured": true,
+    "questions": [
+      {
+        "id": "q2-1",
+        "text": "What does HTML stand for?",
+        "options": [
+          "Hyper Text Markup Language",
+          "Home Tool Markup Language",
+          "Hyperlinks and Text Markup Language",
+          "Hyper Text Makeup Language"
+        ],
+        "correctOption": "A",
+        "explanation": "HTML stands for Hyper Text Markup Language. It is the standard markup language for creating web pages."
+      },
+      {
+        "id": "q2-2",
+        "text": "Which HTML element is used to insert a line break?",
+        "options": ["<lb>", "<br>", "<break>", "<newline>"],
+        "correctOption": "B",
+        "explanation": "The <br> tag is an empty element, which means that it has no end tag. It inserts a single line break."
+      },
+      {
+        "id": "q2-3",
+        "text": "What does CSS stand for?",
+        "options": [
+          "Computer Style Sheets",
+          "Colorful Style Sheets",
+          "Cascading Style Sheets",
+          "Creative Style Sheets"
+        ],
+        "correctOption": "C",
+        "explanation": "CSS stands for Cascading Style Sheets. It describes how HTML elements are to be displayed on screen, paper, or in other media."
+      },
+      {
+        "id": "q2-4",
+        "text": "Where is the correct place to insert a JavaScript tag in HTML?",
+        "options": [
+          "The <head> section",
+          "The <body> section",
+          "Both <head> and <body> are acceptable",
+          "The <title> section"
+        ],
+        "correctOption": "C",
+        "explanation": "JavaScript code can be placed inside the <head> or the <body> section of an HTML document, or linked as an external script."
+      },
+      {
+        "id": "q2-5",
+        "text": "Which property is used in CSS to change the background color of an element?",
+        "options": ["color", "bgcolor", "background-color", "color-background"],
+        "correctOption": "C",
+        "explanation": "The 'background-color' CSS property sets the background color of an element using color keywords, hex, RGB, or HSL values."
+      }
+    ]
+  },
+  {
+    "id": "quiz-3",
+    "creatorId": "admin",
+    "creatorName": "CareerGo Team",
+    "title": "Science Trivia",
+    "description": "Dive into the fascinating world of physical science, biology, and chemistry. Check your understanding of elements, human biology, and space physics.",
+    "category": "Science",
+    "difficulty": "Hard",
+    "thumbnailEmoji": "🔬",
+    "thumbnailColor": "#10b981",
+    "timeLimit": 30,
+    "playsCount": 218,
+    "averageScore": 2.9,
+    "dateCreated": "2026-06-04T09:00:00.000Z",
+    "featured": true,
+    "questions": [
+      {
+        "id": "q3-1",
+        "text": "What is the chemical symbol for Gold?",
+        "options": ["Gd", "Ag", "Au", "Fe"],
+        "correctOption": "C",
+        "explanation": "The chemical symbol for Gold is 'Au', derived from the Latin word 'aurum', which means shining dawn."
+      },
+      {
+        "id": "q3-2",
+        "text": "How many bones are there in a fully-grown adult human body?",
+        "options": ["186", "206", "216", "286"],
+        "correctOption": "B",
+        "explanation": "An adult human skeleton is made up of 206 bones, whereas infants are born with around 270 bones which fuse over time."
+      },
+      {
+        "id": "q3-3",
+        "text": "What is the primary gas that makes up the atmosphere of Venus?",
+        "options": ["Nitrogen", "Oxygen", "Carbon Dioxide", "Helium"],
+        "correctOption": "C",
+        "explanation": "Venus's atmosphere is extremely dense and consists of 96.5% Carbon Dioxide (CO2), creating a runaway greenhouse effect."
+      },
+      {
+        "id": "q3-4",
+        "text": "Which element has the atomic number 1?",
+        "options": ["Helium", "Hydrogen", "Lithium", "Oxygen"],
+        "correctOption": "B",
+        "explanation": "Hydrogen (H) is the first element on the periodic table with an atomic number of 1, containing exactly one proton."
+      },
+      {
+        "id": "q3-5",
+        "text": "What is the speed of light in a vacuum (approximate)?",
+        "options": [
+          "150,000 km/s",
+          "300,000 km/s",
+          "500,000 km/s",
+          "1,000,000 km/s"
+        ],
+        "correctOption": "B",
+        "explanation": "The speed of light in a vacuum is approximately 299,792 kilometers per second, usually rounded to 300,000 km/s."
+      }
+    ]
+  },
+  {
+    "id": "quiz-4",
+    "creatorId": "admin",
+    "creatorName": "CareerGo Team",
+    "title": "World History Quiz",
+    "description": "Travel back in time to test your memory of world wars, ancient civilizations, empires, and monumental events that shaped our modern societies.",
+    "category": "History",
+    "difficulty": "Medium",
+    "thumbnailEmoji": "🏛️",
+    "thumbnailColor": "#f59e0b",
+    "timeLimit": 30,
+    "playsCount": 189,
+    "averageScore": 3.4,
+    "dateCreated": "2026-06-02T14:00:00.000Z",
+    "featured": false,
+    "questions": [
+      {
+        "id": "q4-1",
+        "text": "Who was the first Emperor of the Roman Empire?",
+        "options": ["Julius Caesar", "Nero", "Augustus", "Marcus Aurelius"],
+        "correctOption": "C",
+        "explanation": "Augustus (formerly Octavian) became the first Emperor of Rome in 27 BC, initiating the Pax Romana period."
+      },
+      {
+        "id": "q4-2",
+        "text": "In which year did the Titanic sink?",
+        "options": ["1905", "1912", "1918", "1923"],
+        "correctOption": "B",
+        "explanation": "The Titanic struck an iceberg and sank on its maiden voyage on April 15, 1912."
+      },
+      {
+        "id": "q4-3",
+        "text": "Which ancient civilization built the Machu Picchu citadel?",
+        "options": ["Mayans", "Aztecs", "Incas", "Egyptians"],
+        "correctOption": "C",
+        "explanation": "Machu Picchu is a 15th-century Inca citadel located in the Eastern Cordillera of southern Peru."
+      },
+      {
+        "id": "q4-4",
+        "text": "Who was the primary author of the United States Declaration of Independence?",
+        "options": ["George Washington", "Thomas Jefferson", "Benjamin Franklin", "John Adams"],
+        "correctOption": "B",
+        "explanation": "Thomas Jefferson draft-wrote the declaration between June 11 and June 28, 1776, highlighting natural rights."
+      }
+    ]
+  },
+  {
+    "id": "quiz-5",
+    "creatorId": "admin",
+    "creatorName": "CareerGo Team",
+    "title": "Sports Trivia",
+    "description": "Are you a sports enthusiast? Face this collection of questions testing your records memory in football, basketball, and olympic disciplines.",
+    "category": "Sports",
+    "difficulty": "Medium",
+    "thumbnailEmoji": "⚽",
+    "thumbnailColor": "#ec4899",
+    "timeLimit": 15,
+    "playsCount": 260,
+    "averageScore": 3.1,
+    "dateCreated": "2026-06-05T12:00:00.000Z",
+    "featured": false,
+    "questions": [
+      {
+        "id": "q5-1",
+        "text": "How many players are on the field for one football (soccer) team during a match?",
+        "options": ["9", "10", "11", "12"],
+        "correctOption": "C",
+        "explanation": "A standard soccer match is played between two teams of 11 players each, including one goalkeeper."
+      },
+      {
+        "id": "q5-2",
+        "text": "Which country has won the most FIFA World Cups?",
+        "options": ["Germany", "Italy", "Argentina", "Brazil"],
+        "correctOption": "D",
+        "explanation": "Brazil has won the FIFA World Cup five times (1958, 1962, 1970, 1994, 2002), more than any other nation."
+      },
+      {
+        "id": "q5-3",
+        "text": "How high is a regulation NBA basketball hoop in feet?",
+        "options": ["9 feet", "10 feet", "11 feet", "12 feet"],
+        "correctOption": "B",
+        "explanation": "A regulation NBA basketball rim is suspended exactly 10 feet (3.05 meters) above the court floor."
+      },
+      {
+        "id": "q5-4",
+        "text": "How often are the summer Olympic Games held?",
+        "options": ["Every 2 years", "Every 3 years", "Every 4 years", "Every 5 years"],
+        "correctOption": "C",
+        "explanation": "The summer and winter Olympic Games are held every 4 years, rotating on alternate even years since 1994."
+      }
+    ]
+  },
+  {
+    "id": "quiz-6",
+    "creatorId": "admin",
+    "creatorName": "CareerGo Team",
+    "title": "Pop Culture Trivia",
+    "description": "Test your knowledge of blockbuster movies, chart-topping music, viral trends, and legendary icons of the entertainment industry.",
+    "category": "Pop Culture",
+    "difficulty": "Easy",
+    "thumbnailEmoji": "🍿",
+    "thumbnailColor": "#ef4444",
+    "timeLimit": 15,
+    "playsCount": 312,
+    "averageScore": 4.1,
+    "dateCreated": "2026-06-05T09:00:00.000Z",
+    "featured": false,
+    "questions": [
+      {
+        "id": "q6-1",
+        "text": "Which movie won the Academy Award for Best Picture in 2024?",
+        "options": ["Barbie", "Oppenheimer", "Poor Things", "The Holdovers"],
+        "correctOption": "B",
+        "explanation": "Christopher Nolan's 'Oppenheimer' won the Best Picture award at the 96th Academy Awards in 2024."
+      },
+      {
+        "id": "q6-2",
+        "text": "What is the name of the fictional wizarding school in the 'Harry Potter' series?",
+        "options": ["Narnia", "Middle-earth", "Hogwarts", "Azkaban"],
+        "correctOption": "C",
+        "explanation": "Hogwarts School of Witchcraft and Wizardry is the British wizarding school located in the Highlands of Scotland."
+      },
+      {
+        "id": "q6-3",
+        "text": "Who is often referred to as the 'King of Pop'?",
+        "options": ["Elvis Presley", "Michael Jackson", "Prince", "Freddie Mercury"],
+        "correctOption": "B",
+        "explanation": "Michael Jackson is globally referred to as the 'King of Pop' due to his massive impact on music, dance, and fashion."
+      },
+      {
+        "id": "q6-4",
+        "text": "What is the highest-grossing film of all time (unadjusted for inflation)?",
+        "options": ["Titanic", "Avengers: Endgame", "Avatar", "Star Wars: The Force Awakens"],
+        "correctOption": "C",
+        "explanation": "James Cameron's 'Avatar' (2009) remains the highest-grossing movie of all time, yielding over $2.9 billion worldwide."
+      }
+    ]
+  },
+  {
+    "id": "quiz-7",
+    "creatorId": "admin",
+    "creatorName": "CareerGo Team",
+    "title": "Space & Astronomy",
+    "description": "Look up to the stars and test your grasp of planetary orbits, stellar lifecycles, historic space flights, and cosmic physics.",
+    "category": "Science",
+    "difficulty": "Medium",
+    "thumbnailEmoji": "🚀",
+    "thumbnailColor": "#1d4ed8",
+    "timeLimit": 30,
+    "playsCount": 174,
+    "averageScore": 3.6,
+    "dateCreated": "2026-06-04T15:30:00.000Z",
+    "featured": false,
+    "questions": [
+      {
+        "id": "q7-1",
+        "text": "What is the largest planet in our solar system?",
+        "options": ["Saturn", "Neptune", "Jupiter", "Uranus"],
+        "correctOption": "C",
+        "explanation": "Jupiter is the largest planet in our Solar System, with a mass more than two and a half times that of all the other planets combined."
+      },
+      {
+        "id": "q7-2",
+        "text": "Which planet is known as the 'Red Planet'?",
+        "options": ["Mercury", "Mars", "Venus", "Saturn"],
+        "correctOption": "B",
+        "explanation": "Mars is called the Red Planet because iron minerals in its soil oxidize, or rust, causing it to look red."
+      },
+      {
+        "id": "q7-3",
+        "text": "What is the name of the first human-made satellite launched into space?",
+        "options": ["Apollo 11", "Explorer 1", "Sputnik 1", "Voyager 1"],
+        "correctOption": "C",
+        "explanation": "Sputnik 1 was launched by the Soviet Union on October 4, 1957, beginning the Space Age."
+      },
+      {
+        "id": "q7-4",
+        "text": "What force keeps the planets in orbit around the sun?",
+        "options": ["Magnetic Force", "Friction", "Gravity", "Nuclear Force"],
+        "correctOption": "C",
+        "explanation": "Gravity is the attractive force that acts between any two masses, keeping planets locked in orbits around the massive Sun."
+      }
+    ]
+  },
+  {
+    "id": "quiz-8",
+    "creatorId": "admin",
+    "creatorName": "CareerGo Team",
+    "title": "JavaScript Essentials",
+    "description": "Go beyond basic variables and loops. Test your command of key JavaScript constructs like closures, scoping, prototypes, and promise behaviors.",
+    "category": "Tech",
+    "difficulty": "Hard",
+    "thumbnailEmoji": "🟨",
+    "thumbnailColor": "#ca8a04",
+    "timeLimit": 30,
+    "playsCount": 298,
+    "averageScore": 3.2,
+    "dateCreated": "2026-06-05T15:00:00.000Z",
+    "featured": false,
+    "questions": [
+      {
+        "id": "q8-1",
+        "text": "What is the output of: console.log(typeof NaN);",
+        "options": ["'nan'", "'undefined'", "'number'", "'object'"],
+        "correctOption": "C",
+        "explanation": "NaN stands for 'Not-a-Number', but its data type is officially a 'number' in JavaScript."
+      },
+      {
+        "id": "q8-2",
+        "text": "Which keyword is used to declare block-scoped variables in modern JavaScript?",
+        "options": ["var", "let", "declare", "define"],
+        "correctOption": "B",
+        "explanation": "Modern JavaScript uses 'let' and 'const' to declare variables that are constrained within block scoping ({...}), unlike 'var'."
+      },
+      {
+        "id": "q8-3",
+        "text": "What is a closure in JavaScript?",
+        "options": [
+          "A method to close browser tabs",
+          "An inner function that has access to outer function scope",
+          "A way to lock objects from edits",
+          "A compilation completion event"
+        ],
+        "correctOption": "B",
+        "explanation": "A closure is the combination of a function bundled together with references to its surrounding state (the lexical environment)."
+      },
+      {
+        "id": "q8-4",
+        "text": "Which method is used to serialize a JavaScript object into a JSON string?",
+        "options": ["JSON.parse()", "JSON.serialize()", "JSON.stringify()", "JSON.toString()"],
+        "correctOption": "C",
+        "explanation": "JSON.stringify() parses a JavaScript value or object, converting it into a structured JSON string representation."
+      }
+    ]
+  }
+]

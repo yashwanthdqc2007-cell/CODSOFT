@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Results | CareerGo Quizzes</title>
+  <meta name="description" content="View your quiz attempt results, score percentages, and detailed question reviews on CareerGo.">
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- HEADER NAVBAR -->
+  <header>
+    <div class="container nav-container">
+      <a href="index.html" class="logo-wrapper">
+        <div class="logo-icon">⚡</div>
+        <span>CareerGo<span style="color: var(--text-main);">Quizzes</span></span>
+      </a>
+      
+      <nav class="nav-menu" id="nav-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="browse.html" class="nav-link">Browse Quizzes</a>
+        <a href="create.html" class="nav-link">Create Quiz</a>
+        <a href="dashboard.html" class="nav-link">Dashboard</a>
+      </nav>
+
+      <div class="nav-actions" id="nav-actions">
+        <button class="btn-icon">🌓</button>
+      </div>
+
+      <div class="mobile-nav-toggle" id="mobile-nav-toggle">☰</div>
+    </div>
+  </header>
+
+  <!-- RESULTS CORE CONTAINER -->
+  <main class="container section-padding" id="results-view" style="padding-top: 40px;">
+    
+    <div class="results-container" id="results-container">
+      <!-- Loading shimmer template -->
+      <div class="loading-shimmer" style="width: 100%; height: 350px; border-radius: var(--radius-lg);"></div>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <a href="index.html" class="logo-wrapper footer-logo">
+          <div class="logo-icon">⚡</div>
+          <span>CareerGo<span style="color: white;">Quizzes</span></span>
+        </a>
+        <p class="footer-desc">
+          CareerGo Quizzes is a modern interactive trivia platform for testing candidates, studying materials, or simply competing with peers.
+        </p>
+        <div class="social-links">
+          <a href="#" class="social-btn">🌐</a>
+          <a href="#" class="social-btn">🐦</a>
+          <a href="#" class="social-btn">🐙</a>
+        </div>
+      </div>
+      
+      <div>
+        <h4 class="footer-title">Platform</h4>
+        <ul class="footer-links">
+          <li><a href="browse.html">Browse Quizzes</a></li>
+          <li><a href="create.html">Create Quiz</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-title">Categories</h4>
+        <ul class="footer-links">
+          <li><a href="browse.html?category=Tech">Tech / Programming</a></li>
+          <li><a href="browse.html?category=Science">Science & Space</a></li>
+          <li><a href="browse.html?category=History">World History</a></li>
+          <li><a href="browse.html?category=General">General Knowledge</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-title">Stay Updated</h4>
+        <p class="footer-desc" style="font-size: 0.85rem; margin-bottom: 16px;">Subscribe to receive newsletter alerts about new quizzes and feature upgrades.</p>
+        <form class="newsletter-form" onsubmit="event.preventDefault(); window.showToast('Subscribed successfully!', 'success');">
+          <input type="email" placeholder="Your email address" class="newsletter-input" required>
+          <button type="submit" class="newsletter-btn">Join</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        &copy; 2026 CareerGo Quizzes. Built with Antigravity for modern web evaluation.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/app.js"></script>
+  <script>
+    // Page Results Loader
+    document.addEventListener('DOMContentLoaded', () => {
+      if (window.AppState.isLoaded) {
+        renderResults();
+      } else {
+        document.addEventListener('appDataLoaded', renderResults);
+      }
+    });
+
+    function renderResults() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const attemptId = urlParams.get('attemptId');
+      const container = document.getElementById('results-container');
+
+      if (!attemptId) {
+        container.innerHTML = `
+          <div class="table-empty" style="padding: 48px 20px;">
+            <div class="table-empty-icon">❌</div>
+            <h3>No Attempt ID Found</h3>
+            <p class="text-muted" style="margin-top: 8px;">Navigate back to browse quizzes and take a test to view performance details.</p>
+            <a href="browse.html" class="btn btn-primary btn-sm" style="margin-top: 16px;">Browse Quizzes</a>
+          </div>
+        `;
+        return;
+      }
+
+      const attempt = window.AppState.attempts.find(a => a.id === attemptId);
+
+      if (!attempt) {
+        container.innerHTML = `
+          <div class="table-empty" style="padding: 48px 20px;">
+            <div class="table-empty-icon">🔍</div>
+            <h3>Attempt Record Not Found</h3>
+            <p class="text-muted" style="margin-top: 8px;">The requested quiz submission history could not be recovered.</p>
+            <a href="browse.html" class="btn btn-primary btn-sm" style="margin-top: 16px;">Browse Quizzes</a>
+          </div>
+        `;
+        return;
+      }
+
+      // 1. Calculate Score Variables
+      const score = attempt.score;
+      const totalQ = attempt.totalQuestions;
+      const percentage = attempt.percentage;
+
+      // 2. Select rating texts
+      let ratingText = '';
+      let ratingDesc = '';
+      if (percentage === 100) {
+        ratingText = '🏆 Perfect Score!';
+        ratingDesc = 'Incredible job! You answered every single question correctly. You are officially a Master of this topic!';
+      } else if (percentage >= 80) {
+        ratingText = '🌟 Outstanding Job!';
+        ratingDesc = 'Excellent score! You have a highly advanced understanding of these concepts. Keep up the great work!';
+      } else if (percentage >= 50) {
+        ratingText = '👍 Well Done!';
+        ratingDesc = 'Good job! You passed the assessment. Review the incorrect answers below to close any remaining knowledge gaps.';
+      } else {
+        ratingText = '📚 Keep Studying!';
+        ratingDesc = 'Don\'t discourage yourself. Go through the answer explanations below, brush up on details, and try again!';
+      }
+
+      // 3. Circle SVG circumference maths
+      const circleRadius = 90;
+      const circumference = 2 * Math.PI * circleRadius; // ~565.48
+      const strokeOffset = circumference - (circumference * percentage) / 100;
+
+      // 4. Generate Detailed Review Cards List
+      const optionLetters = ['A', 'B', 'C', 'D'];
+      const reviewCardsHtml = attempt.answers.map((ans, qIdx) => {
+        const isCorrectClass = ans.isCorrect ? 'correct' : 'incorrect';
+        const isCorrectBadge = ans.isCorrect ? '<span class="badge badge-secondary">Correct</span>' : '<span class="badge badge-danger">Incorrect</span>';
+        
+        // Options grid html
+        // Let's look up corresponding quiz questions to render full options text list
+        // Note: attempt.answers already contains question text, choices etc.
+        // We can display custom choices indicators
+        const answersListHtml = optionLetters.map((letter, idx) => {
+          let choiceStatusClass = '';
+          if (letter === ans.correctChoice) {
+            choiceStatusClass = 'correct';
+          } else if (letter === ans.userChoice && !ans.isCorrect) {
+            choiceStatusClass = 'user-wrong';
+          }
+          
+          // Fallback choices text placeholder if we don't have option texts in answers.
+          // Wait! In implementation_plan we mapped attempt.answers:
+          // userChoice, correctChoice, isCorrect, explanation etc.
+          // Let's find full options texts from original quiz if available, otherwise just print choice option letter.
+          const originalQuiz = window.AppState.quizzes.find(q => q.id === attempt.quizId);
+          let optionText = `Option ${letter}`;
+          if (originalQuiz && originalQuiz.questions[qIdx] && originalQuiz.questions[qIdx].options[idx]) {
+            optionText = originalQuiz.questions[qIdx].options[idx];
+          }
+
+          return `
+            <div class="review-choice-item ${choiceStatusClass}">
+              <strong>${letter}.</strong> ${optionText}
+            </div>
+          `;
+        }).join('');
+
+        return `
+          <div class="review-card ${isCorrectClass}">
+            <div class="review-q-header">
+              <div class="review-q-text-desc">Question ${qIdx + 1}: ${ans.questionText}</div>
+              ${isCorrectBadge}
+            </div>
+            
+            <div class="review-choices">
+              ${answersListHtml}
+            </div>
+
+            ${ans.explanation ? `
+              <div class="review-explanation">
+                <strong>💡 Explanation:</strong> ${ans.explanation}
+              </div>
+            ` : ''}
+          </div>
+        `;
+      }).join('');
+
+      // 5. Renders Framework
+      container.innerHTML = `
+        <!-- Animated Ring Score Circle -->
+        <div class="score-visualizer">
+          <svg class="score-svg">
+            <defs>
+              <linearGradient id="score-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="var(--primary)" />
+                <stop offset="100%" stop-color="var(--secondary)" />
+              </linearGradient>
+            </defs>
+            <circle class="score-svg-bg" cx="110" cy="110" r="${circleRadius}"></circle>
+            <circle class="score-svg-fill" id="score-fill" cx="110" cy="110" r="${circleRadius}" style="stroke-dasharray: ${circumference}; stroke-dashoffset: ${circumference};"></circle>
+          </svg>
+          <div class="score-text-overlay">
+            <span class="score-percentage">${percentage}%</span>
+            <span class="score-fraction">${score} / ${totalQ} Correct</span>
+          </div>
+        </div>
+
+        <h2 class="rating-text">${ratingText}</h2>
+        <p class="rating-description">${ratingDesc}</p>
+
+        <!-- CTA Buttons -->
+        <div class="results-actions">
+          <a href="take.html?id=${attempt.quizId}" class="btn btn-primary">Retake Quiz</a>
+          <a href="browse.html" class="btn btn-secondary">Browse Quizzes</a>
+          <a href="dashboard.html" class="btn btn-outline">Go to Dashboard</a>
+        </div>
+
+        <!-- Detailed Review List -->
+        <div class="results-review-header">
+          <h3>Attempt Performance Review</h3>
+          <p class="text-muted">Analyze your choices compared to the correct answers below.</p>
+        </div>
+
+        <div class="results-review-list">
+          ${reviewCardsHtml}
+        </div>
+      `;
+
+      // Trigger circle fill animation after a small delay
+      setTimeout(() => {
+        const fillCircle = document.getElementById('score-fill');
+        if (fillCircle) {
+          fillCircle.style.strokeDashoffset = strokeOffset;
+        }
+      }, 150);
+    }
+  </script>
+</body>
+</html>

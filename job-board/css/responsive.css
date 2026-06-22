@@ -1,0 +1,203 @@
+/* --- RESPONSIVE STYLE SHEET --- */
+
+@media (max-width: 1024px) {
+  :root {
+    --max-width: 960px;
+  }
+  
+  .jobs-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  
+  .testimonials-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --header-height: 70px;
+  }
+  
+  .section-padding {
+    padding: 60px 0;
+  }
+  
+  .section-header h2 {
+    font-size: 1.75rem;
+  }
+  
+  /* Navigation */
+  .mobile-nav-toggle {
+    display: block;
+    cursor: pointer;
+  }
+  
+  .nav-menu {
+    position: fixed;
+    top: var(--header-height);
+    left: -100%;
+    width: 100%;
+    height: calc(100vh - var(--header-height));
+    background-color: var(--surface);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 40px;
+    gap: 24px;
+    box-shadow: var(--shadow-lg);
+    transition: left var(--transition-slow);
+    z-index: 90;
+    overflow-y: auto;
+  }
+  .nav-menu.active {
+    left: 0;
+  }
+  
+  .nav-actions {
+    display: none; /* In mobile, actions should be integrated or side-by-side */
+  }
+  .nav-actions.mobile-visible {
+    display: flex;
+  }
+
+  /* Hero Section */
+  .hero-section {
+    padding: 60px 0;
+  }
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  .hero-subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 24px;
+  }
+  
+  /* Search Bar */
+  .search-bar-container {
+    flex-direction: column;
+    padding: 16px;
+    border-radius: var(--radius-md);
+  }
+  .search-item {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+    padding: 8px 0;
+  }
+  .search-item:last-of-type {
+    border-bottom: none;
+  }
+  .search-bar-container .btn {
+    width: 100%;
+    padding: 14px;
+    margin-top: 8px;
+  }
+
+  /* Grid layouts */
+  .jobs-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Dashboard Structure */
+  .dashboard-container {
+    flex-direction: column;
+  }
+  
+  .dashboard-sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+    padding: 24px;
+  }
+  .sidebar-profile {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 16px;
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    text-align: left;
+  }
+  .sidebar-avatar {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 0;
+  }
+  .sidebar-menu {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .sidebar-menu-btn {
+    width: auto;
+    padding: 8px 16px;
+    font-size: 0.88rem;
+  }
+  .sidebar-footer {
+    display: none; /* Remove duplicate footer elements in mobile sidebar */
+  }
+  
+  .dashboard-content {
+    padding: 24px;
+  }
+  .metrics-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .profile-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-content h1 {
+    font-size: 2.1rem;
+  }
+  
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  
+  .auth-card {
+    padding: 32px 16px;
+  }
+  .role-toggle-group {
+    gap: 8px;
+  }
+  .role-toggle-btn {
+    padding: 12px 8px;
+    font-size: 0.9rem;
+  }
+  
+  .section-header h2 {
+    font-size: 1.5rem;
+  }
+}

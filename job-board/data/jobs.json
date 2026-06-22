@@ -1,0 +1,524 @@
+[
+  {
+    "id": "job-1",
+    "employerId": "emp-demo",
+    "title": "Senior Frontend Engineer (React)",
+    "companyName": "TechVibe Systems",
+    "companyLogo": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=100&h=100&fit=crop&q=80",
+    "salaryRange": "$130,000 - $160,000",
+    "salaryMin": 130000,
+    "salaryMax": 160000,
+    "location": "San Francisco, CA (Hybrid)",
+    "type": "Full-time",
+    "category": "Frontend Development",
+    "postedDate": "2026-06-04T10:00:00.000Z",
+    "pinned": true,
+    "description": "Lead the frontend team in building our next-generation SaaS analytics dashboard using React, TypeScript, and state-of-the-art styling modules. Collaborate closely with our UI/UX designers to translate Figma wireframes into performant, accessible component interfaces. Maintain our shared component library and mentor junior/mid-level engineers.",
+    "requirements": [
+      "5+ years of experience building responsive web applications using React.js and TypeScript.",
+      "Deep understanding of modern CSS methodologies (Tailwind, CSS Grid, Custom Properties).",
+      "Familiarity with performance profiling, bundle optimization, and Core Web Vitals.",
+      "Excellent communication and collaboration skills."
+    ],
+    "responsibilities": [
+      "Architect and implement reusable React component libraries.",
+      "Optimize web application performance for maximum loading speed and scalability.",
+      "Collaborate with UX designers to translate Figma mockups into pixel-perfect interfaces.",
+      "Conduct code reviews and set frontend engineering standards."
+    ],
+    "skills": ["React", "TypeScript", "JavaScript", "Figma", "Webpack", "Tailwind CSS", "CSS Grid"]
+  },
+  {
+    "id": "job-2",
+    "employerId": "emp-demo",
+    "title": "Staff Backend Engineer (Node/Go)",
+    "companyName": "CloudScale Solutions",
+    "companyLogo": "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?w=100&h=100&fit=crop&q=80",
+    "salaryRange": "$160,000 - $190,000",
+    "salaryMin": 160000,
+    "salaryMax": 190000,
+    "location": "Remote (US/Canada)",
+    "type": "Full-time",
+    "category": "Backend Development",
+    "postedDate": "2026-06-05T08:30:00.000Z",
+    "pinned": true,
+    "description": "Design, build, and optimize highly concurrent, low-latency backend microservices using Node.js and Go. Oversee the scaling of our event-driven data pipelines processing millions of daily messages. Lead architectural discussions and database optimization projects to support our rapid growth.",
+    "requirements": [
+      "8+ years of backend development experience using Node.js, Go, or Java.",
+      "Deep understanding of distributed systems, microservices architecture, and concurrency patterns.",
+      "Extensive experience with relational (PostgreSQL) and NoSQL databases (Redis, MongoDB).",
+      "Proven track record of managing infrastructure on AWS or GCP using Terraform."
+    ],
+    "responsibilities": [
+      "Design and maintain scalable APIs and event-driven microservices.",
+      "Improve database query performance and scale data warehouses.",
+      "Establish engineering best practices for testing, CI/CD, and system monitoring.",
+      "Lead investigations and resolution of complex production incidents."
+    ],
+    "skills": ["Node.js", "Go", "PostgreSQL", "Redis", "Kafka", "AWS", "Docker", "Microservices"]
+  },
+  {
+    "id": "job-3",
+    "employerId": "emp-demo-2",
+    "title": "Lead UI/UX Product Designer",
+    "companyName": "PixelCraft Creative",
+    "companyLogo": "https://images.unsplash.com/photo-1614850523459-c2f4c699c52e?w=100&h=100&fit=crop&q=80",
+    "salaryRange": "$115,000 - $145,000",
+    "salaryMin": 115000,
+    "salaryMax": 145000,
+    "location": "New York, NY (Hybrid)",
+    "type": "Full-time",
+    "category": "UI/UX Design",
+    "postedDate": "2026-06-04T09:15:00.000Z",
+    "pinned": true,
+    "description": "Own the design system and end-to-end user experience of our flagship mobile and web applications. Conduct user research, translate insights into actionable wireframes, and design high-fidelity prototypes. Collaborate with engineers to ensure pixel-perfect deployment and bring delight to our users.",
+    "requirements": [
+      "5+ years of product design experience with a stellar portfolio demonstrating UI/UX excellence.",
+      "Expert knowledge of Figma, design systems, interactive prototyping, and user testing.",
+      "Strong understanding of user-centered design principles and information architecture.",
+      "Basic understanding of HTML/CSS is highly valued to facilitate collaboration with developers."
+    ],
+    "responsibilities": [
+      "Lead design projects from conceptualization and user journeys to high-fidelity mockups.",
+      "Maintain, scale, and document our global Figma design system.",
+      "Conduct user research, usability testing, and translate findings into design iterations.",
+      "Animate UI micro-interactions to deliver a polished, premium experience."
+    ],
+    "skills": ["Figma", "UI Design", "UX Research", "Prototyping", "Design Systems", "HTML", "CSS"]
+  },
+  {
+    "id": "job-4",
+    "employerId": "emp-demo-2",
+    "title": "Senior Product Manager",
+    "companyName": "VentureCap Incubator",
+    "companyLogo": "https://images.unsplash.com/photo-1557683316-973673baf926?w=100&h=100&fit=crop&q=80",
+    "salaryRange": "$140,000 - $170,000",
+    "salaryMin": 140000,
+    "salaryMax": 170000,
+    "location": "Boston, MA (Onsite)",
+    "type": "Full-time",
+    "category": "Product Management",
+    "postedDate": "2026-06-03T11:00:00.000Z",
+    "pinned": false,
+    "description": "Drive the product lifecycle of our core fintech integration tools from conception to launch. Work directly with customers and cross-functional teams of engineers and designers to define product roadmaps. Analyze market trends, specify feature requirements, and establish success criteria.",
+    "requirements": [
+      "4+ years of product management experience, preferably in B2B SaaS or Fintech.",
+      "Proven history of launching successful digital products and leading agile teams.",
+      "Excellent data analysis skills (SQL, Amplitude) and customer-facing communication.",
+      "Strong technical understanding to collaborate with backend and DevOps engineers."
+    ],
+    "responsibilities": [
+      "Define product strategy, roadmap, and quarterly KPI goals.",
+      "Write detailed product requirement documents (PRDs) and user stories.",
+      "Collaborate with engineering leads to prioritize backlog tickets in Scrum sprints.",
+      "Conduct user interviews and customer feedback loops to iterate on features."
+    ],
+    "skills": ["Product Strategy", "Agile", "Scrum", "SQL", "Amplitude", "Jira", "Figma"]
+  },
+  {
+    "id": "job-5",
+    "employerId": "emp-demo-3",
+    "title": "Cloud DevOps & Platform Engineer",
+    "companyName": "Fortress SecOps",
+    "companyLogo": "https://images.unsplash.com/photo-1606857521015-7f9fcf423740?w=100&h=100&fit=crop&q=80",
+    "salaryRange": "$135,000 - $165,000",
+    "salaryMin": 135000,
+    "salaryMax": 165000,
+    "location": "Remote",
+    "type": "Full-time",
+    "category": "DevOps/Cloud",
+    "postedDate": "2026-06-05T07:12:00.000Z",
+    "pinned": false,
+    "description": "Automate, manage, and scale our cloud platform operations across multiple AWS regions. Architect and maintain our Kubernetes container clusters and infrastructure-as-code modules. Build reliable CI/CD pipelines to support daily microservice releases and enforce system security controls.",
+    "requirements": [
+      "4+ years of experience in DevOps, Site Reliability, or Infrastructure engineering.",
+      "Expertise with AWS cloud offerings (EC2, EKS, RDS, VPC, IAM).",
+      "Strong proficiency with Kubernetes, Docker, and Terraform.",
+      "Solid knowledge of shell scripting (Bash, Python) and CI/CD tools (GitHub Actions)."
+    ],
+    "responsibilities": [
+      "Architect infrastructure-as-code modules using Terraform.",
+      "Optimize Kubernetes resources, autoscaling rules, and log collection.",
+      "Build and maintain robust deployment pipelines for development and production systems.",
+      "Participate in on-call rotation to maintain 99.9% uptime."
+    ],
+    "skills": ["AWS", "Terraform", "Kubernetes", "Docker", "GitHub Actions", "Bash", "Python"]
+  },
+  {
+    "id": "job-6",
+    "employerId": "emp-demo-3",
+    "title": "Senior Full Stack Developer",
+    "companyName": "LaunchPad Startups",
+    "companyLogo": "https://images.unsplash.com/photo-1561070791-26c113006238?w=100&h=100&fit=crop&q=80",
+    "salaryRange": "$125,000 - $155,000",
+    "salaryMin": 125000,
+    "salaryMax": 155000,
+    "location": "Austin, TX (Hybrid)",
+    "type": "Full-time",
+    "category": "Full Stack",
+    "postedDate": "2026-06-02T16:00:00.000Z",
+    "pinned": false,
+    "description": "Build end-to-end features for our early-stage client platforms using React and Node.js. Architect scalable database schemas (PostgreSQL) and deploy API integrations (Stripe, Twilio). Take ownership of code from development to cloud hosting environment.",
+    "requirements": [
+      "4+ years of full stack software engineering experience.",
+      "Proficient in React, Node.js, Express, and modern JavaScript/TypeScript.",
+      "Experience designing relational databases (PostgreSQL) and RESTful API structures.",
+      "Familiarity with serverless architectures and cloud deployment on AWS or Vercel."
+    ],
+    "responsibilities": [
+      "Develop and deploy clean, documented, and tested full stack features.",
+      "Design database architectures and optimize queries for faster page loads.",
+      "Collaborate with marketing and product leads on features prioritization.",
+      "Write unit and integration tests to maintain high-quality codebases."
+    ],
+    "skills": ["React", "Node.js", "Express", "TypeScript", "PostgreSQL", "AWS", "JavaScript"]
+  },
+  {
+    "id": "job-7",
+    "employerId": "emp-demo-4",
+    "title": "Frontend Developer (Junior/Mid)",
+    "companyName": "CreativeWeb Agency",
+    "companyLogo": "https://images.unsplash.com/photo-1561070791-26c113006238?w=100&h=100&fit=crop&q=80",
+    "salaryRange": "$75,000 - $95,000",
+    "salaryMin": 75000,
+    "salaryMax": 95000,
+    "location": "Chicago, IL (Hybrid)",
+    "type": "Full-time",
+    "category": "Frontend Development",
+    "postedDate": "2026-06-05T13:00:00.000Z",
+    "pinned": false,
+    "description": "Create responsive, pixel-perfect web layouts and interactive user interfaces using React and vanilla HTML/CSS. Collaborate with design agencies to implement motion design and visual storytelling experiences. Maintain and expand features on existing client platforms.",
+    "requirements": [
+      "2+ years of frontend web development experience.",
+      "Proficient in HTML5, CSS3, JavaScript, and React.",
+      "Familiarity with Figma, browser layout techniques, and responsive grids.",
+      "Detail-oriented with a passion for micro-interactions and smooth styling."
+    ],
+    "responsibilities": [
+      "Implement responsive frontend layouts matching Figma specifications.",
+      "Integrate REST APIs and manage client-side state transitions.",
+      "Optimize CSS stylesheet sizes and asset delivery for speed.",
+      "Debug cross-browser compatibility issues and styling inconsistencies."
+    ],
+    "skills": ["React", "JavaScript", "HTML", "CSS", "Figma", "Git", "REST APIs"]
+  },
+  {
+    "id": "job-8",
+    "employerId": "emp-demo-4",
+    "title": "React Native Mobile Developer",
+    "companyName": "AppForge Studio",
+    "companyLogo": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=100&h=100&fit=crop&q=80",
+    "salaryRange": "$95,000 - $125,000",
+    "salaryMin": 95000,
+    "salaryMax": 125000,
+    "location": "Remote",
+    "type": "Contract",
+    "category": "Frontend Development",
+    "postedDate": "2026-06-03T14:00:00.000Z",
+    "pinned": false,
+    "description": "Develop and maintain clean React Native mobile applications for both iOS and Android. Build fluid animations, handle push notifications, and configure local storage databases. Partner with design and backend teams to release high-performance native-feeling features.",
+    "requirements": [
+      "3+ years of professional React Native app development.",
+      "Knowledge of Apple App Store and Google Play deployment workflows.",
+      "Strong skills in TypeScript, React Hooks, and mobile layout constraints.",
+      "Experience with offline data storage and mobile API integrations."
+    ],
+    "responsibilities": [
+      "Implement screens and layouts in React Native for iOS and Android.",
+      "Optimize app performance, startup times, and smooth scroll frames.",
+      "Submit and coordinate app updates on app store platforms.",
+      "Configure local SQL/NoSQL databases and offline state caching."
+    ],
+    "skills": ["React Native", "TypeScript", "JavaScript", "Redux", "REST APIs", "App Store", "Git"]
+  },
+  {
+    "id": "job-9",
+    "employerId": "emp-demo",
+    "title": "Database Engineer (Postgres/Redis)",
+    "companyName": "CloudScale Solutions",
+    "companyLogo": "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?w=100&h=100&fit=crop&q=80",
+    "salaryRange": "$130,000 - $155,000",
+    "salaryMin": 130000,
+    "salaryMax": 155000,
+    "location": "Remote",
+    "type": "Full-time",
+    "category": "Backend Development",
+    "postedDate": "2026-06-01T09:00:00.000Z",
+    "pinned": false,
+    "description": "Optimize and manage our high-throughput relational databases and data warehouse systems. Design, scale, and document Postgres query routines, partitioning methods, and cache indexing structures. Ensure data security compliance and construct robust backup strategies.",
+    "requirements": [
+      "4+ years of dedicated database administration or database engineering.",
+      "Expert knowledge of SQL optimization, indexes, execution plans, and Postgres configs.",
+      "Experience scaling Redis cache pipelines and managing data replicas.",
+      "Knowledge of infrastructure tools like AWS RDS, Docker, and shell scripting."
+    ],
+    "responsibilities": [
+      "Optimize slow database queries, indexes, and complex analytics operations.",
+      "Establish automated DB scaling, schema migration pipelines, and replicas.",
+      "Partner with backend engineers on schema design and caching rules.",
+      "Perform audit scans, monitor database logs, and prevent data leak points."
+    ],
+    "skills": ["PostgreSQL", "Redis", "SQL", "Docker", "AWS", "Bash", "Database Tuning"]
+  },
+  {
+    "id": "job-10",
+    "employerId": "emp-demo",
+    "title": "Backend Python Developer",
+    "companyName": "AI-Analytics Corp",
+    "companyLogo": "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?w=100&h=100&fit=crop&q=80",
+    "salaryRange": "$110,000 - $135,000",
+    "salaryMin": 110000,
+    "salaryMax": 135000,
+    "location": "San Francisco, CA (Hybrid)",
+    "type": "Full-time",
+    "category": "Backend Development",
+    "postedDate": "2026-06-04T15:00:00.000Z",
+    "pinned": false,
+    "description": "Design and maintain high-performance REST APIs in Python using FastAPI and Django. Integrate data models, queue managers, and data scraping jobs to feed our machine learning algorithms. Work closely with data scientists to optimize model latency and delivery.",
+    "requirements": [
+      "3+ years of backend development using Python (Django / FastAPI / Flask).",
+      "Familiarity with event queues (Celery, RabbitMQ) and SQL databases.",
+      "Experience integrating machine learning APIs or scraping web data.",
+      "Solid knowledge of containerized deployments using Docker."
+    ],
+    "responsibilities": [
+      "Develop API structures in Python to feed dashboard visualizations.",
+      "Manage background tasks, batch processes, and scraping schedules.",
+      "Collaborate with AI researchers to package and deploy predictive models.",
+      "Write unit tests and optimize memory configurations for microservices."
+    ],
+    "skills": ["Python", "FastAPI", "Django", "Docker", "PostgreSQL", "Celery", "REST APIs"]
+  },
+  {
+    "id": "job-11",
+    "employerId": "emp-demo-2",
+    "title": "Full Stack Engineer (Node/Vue)",
+    "companyName": "LaunchPad Startups",
+    "companyLogo": "https://images.unsplash.com/photo-1561070791-26c113006238?w=100&h=100&fit=crop&q=80",
+    "salaryRange": "$100,000 - $130,000",
+    "salaryMin": 100000,
+    "salaryMax": 130000,
+    "location": "Hybrid (Austin, TX)",
+    "type": "Full-time",
+    "category": "Full Stack",
+    "postedDate": "2026-06-05T06:00:00.000Z",
+    "pinned": false,
+    "description": "Work in an agile environment developing custom dashboards using Vue.js and Node.js backend. Design robust API models, manage application state, and integrate third-party payment systems. Assist with cloud maintenance and automated deployments.",
+    "requirements": [
+      "3+ years of full stack software engineering experience.",
+      "Proficient in Vue.js (Vue 3, Pinia) and Node.js (Express).",
+      "Experience with relational databases (MySQL/PostgreSQL) and Git workflow.",
+      "Strong debugging skills and passion for interactive styling."
+    ],
+    "responsibilities": [
+      "Create clean frontend components in Vue and connect REST endpoints.",
+      "Develop database migration scripts and write scalable API logic.",
+      "Deploy code updates on AWS servers and manage CI/CD runs.",
+      "Support customer-reported bug investigations and resolve them."
+    ],
+    "skills": ["Vue.js", "Node.js", "Express", "MySQL", "JavaScript", "AWS", "Git"]
+  },
+  {
+    "id": "job-12",
+    "employerId": "emp-demo-2",
+    "title": "Contract Full Stack Engineer",
+    "companyName": "RapidIterate Tech",
+    "companyLogo": "https://images.unsplash.com/photo-1614850523459-c2f4c699c52e?w=100&h=100&fit=crop&q=80",
+    "salaryRange": "$70 - $90 / hour",
+    "salaryMin": 140000,
+    "salaryMax": 180000,
+    "location": "Remote",
+    "type": "Contract",
+    "category": "Full Stack",
+    "postedDate": "2026-06-05T10:00:00.000Z",
+    "pinned": false,
+    "description": "Join our 6-month contract task to upgrade our legacy web application stack to Next.js and Serverless Node APIs. Write clean TypeScript, construct database mappings, and optimize search filters. Deliver high-speed results working with an active startup team.",
+    "requirements": [
+      "4+ years of professional React / Next.js and Node.js full stack development.",
+      "Deep understanding of serverless architecture, AWS Lambda, and Vercel deployments.",
+      "Familiarity with Prisma ORM and relational databases.",
+      "Available to work on a full-time contract basis in US time zones."
+    ],
+    "responsibilities": [
+      "Refactor legacy dashboard pages to Next.js framework.",
+      "Design database schema migrations and write serverless APIs.",
+      "Integrate advanced search indexing engines (Algolia/Elasticsearch).",
+      "Draft system documentation and coordinate sprint deliverables."
+    ],
+    "skills": ["React", "Node.js", "TypeScript", "Next.js", "AWS", "Prisma", "REST APIs"]
+  },
+  {
+    "id": "job-13",
+    "employerId": "emp-demo-3",
+    "title": "Site Reliability Engineer (SRE)",
+    "companyName": "Fortress SecOps",
+    "companyLogo": "https://images.unsplash.com/photo-1606857521015-7f9fcf423740?w=100&h=100&fit=crop&q=80",
+    "salaryRange": "$145,000 - $175,000",
+    "salaryMin": 145000,
+    "salaryMax": 175000,
+    "location": "Boston, MA (Hybrid)",
+    "type": "Full-time",
+    "category": "DevOps/Cloud",
+    "postedDate": "2026-06-04T11:00:00.000Z",
+    "pinned": false,
+    "description": "Ensure the high availability, reliability, and security of our high-volume cloud services. Build monitoring frameworks, debug complex network flows, and automate infrastructure configuration. Set up incident response metrics and manage system failover procedures.",
+    "requirements": [
+      "4+ years of site reliability engineering or cloud operations experience.",
+      "Expert knowledge of Linux networks, security rules, and TCP/IP flows.",
+      "Strong skills in cloud monitoring tools (Prometheus, Grafana, Datadog).",
+      "Proficient in scripting languages like Python, Go, or Ruby."
+    ],
+    "responsibilities": [
+      "Develop system alarms, dashboards, and automated scaling playbooks.",
+      "Optimize Kubernetes networking, VPC security groups, and cloud routing.",
+      "Investigate and write detailed post-mortems for system incidents.",
+      "Implement load balancing rules and evaluate system failure points."
+    ],
+    "skills": ["Kubernetes", "AWS", "Python", "Go", "Docker", "Prometheus", "Grafana", "Linux"]
+  },
+  {
+    "id": "job-14",
+    "employerId": "emp-demo-3",
+    "title": "AWS Cloud Architect",
+    "companyName": "CloudScale Solutions",
+    "companyLogo": "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?w=100&h=100&fit=crop&q=80",
+    "salaryRange": "$170,000 - $205,000",
+    "salaryMin": 170000,
+    "salaryMax": 205000,
+    "location": "Remote",
+    "type": "Full-time",
+    "category": "DevOps/Cloud",
+    "postedDate": "2026-06-05T09:00:00.000Z",
+    "pinned": false,
+    "description": "Architect robust, secure, and cost-effective multi-tenant cloud ecosystems on AWS. Standardize AWS architectures across development groups, establishing IAM boundaries, VPC configurations, and database nodes. Design automated recovery methods and advise management on cloud cost controls.",
+    "requirements": [
+      "7+ years of dedicated cloud architecture experience, with AWS Certified Solutions Architect Pro.",
+      "Deep understanding of VPC networking, IAM permissions, AWS KMS, and cloud security frameworks.",
+      "Expertise with Terraform and infrastructure management at scale.",
+      "Excellent technical communication and architectural drafting skills."
+    ],
+    "responsibilities": [
+      "Design global multi-region cloud infrastructures for microservices.",
+      "Write secure, reusable Terraform modules for engineering groups.",
+      "Review and audit cloud spending, recommending optimizations.",
+      "Set security architectures and compliance policies (SOC2/HIPAA)."
+    ],
+    "skills": ["AWS", "Terraform", "Kubernetes", "IAM", "VPC", "Docker", "Cloud Security"]
+  },
+  {
+    "id": "job-15",
+    "employerId": "emp-demo-4",
+    "title": "Product Designer (Figma/UX)",
+    "companyName": "PixelCraft Creative",
+    "companyLogo": "https://images.unsplash.com/photo-1614850523459-c2f4c699c52e?w=100&h=100&fit=crop&q=80",
+    "salaryRange": "$90,000 - $115,000",
+    "salaryMin": 90000,
+    "salaryMax": 115000,
+    "location": "New York, NY (Hybrid)",
+    "type": "Full-time",
+    "category": "UI/UX Design",
+    "postedDate": "2026-06-03T10:00:00.000Z",
+    "pinned": false,
+    "description": "Design clean, user-centric screen interfaces and workflows for mobile and web experiences. Build high-fidelity interactive wireframes in Figma and conduct usability interviews to validate ideas. Partner with product managers and developers to iterate on features.",
+    "requirements": [
+      "3+ years of professional UX/UI design experience.",
+      "Expertise in Figma, wireframing, typography, and visual UI layout.",
+      "Experience conducting user interviews and usability analysis sessions.",
+      "A portfolio showcasing clean design aesthetics and structured design thinking."
+    ],
+    "responsibilities": [
+      "Translate feature descriptions into visual screens and layouts.",
+      "Perform usability test sessions and draft research summary cards.",
+      "Collaborate with developers to explain interaction states and exports.",
+      "Participate in design syncs and expand Figma libraries."
+    ],
+    "skills": ["Figma", "UI Design", "UX Research", "Prototyping", "Design Systems", "Wireframing"]
+  },
+  {
+    "id": "job-16",
+    "employerId": "emp-demo-4",
+    "title": "Visual UI Designer",
+    "companyName": "GrowthFlow Media",
+    "companyLogo": "https://images.unsplash.com/photo-1557683316-973673baf926?w=100&h=100&fit=crop&q=80",
+    "salaryRange": "$80,000 - $100,000",
+    "salaryMin": 80000,
+    "salaryMax": 100000,
+    "location": "Hybrid (Chicago, IL)",
+    "type": "Part-time",
+    "category": "UI/UX Design",
+    "postedDate": "2026-06-05T11:00:00.000Z",
+    "pinned": false,
+    "description": "Support our visual design campaigns, landing page graphics, and dashboard UI layouts. Focus on typography hierarchy, color schemes, illustrations, and motion design animations. Ensure visual brand consistency across multiple SaaS products.",
+    "requirements": [
+      "2+ years of visual UI design experience.",
+      "Proficient with Figma, Adobe Photoshop, Illustrator, and After Effects.",
+      "Strong understanding of graphic design principles, color theory, and layout hierarchy.",
+      "Experience creating visual mockups and vectors for web assets."
+    ],
+    "responsibilities": [
+      "Design web illustrations, icons, and page visuals.",
+      "Flesh out visual aesthetics and UI themes for SaaS dashboards.",
+      "Coordinate with marketing on asset exports and layouts.",
+      "Animate visual micro-interactions and transitions in Figma."
+    ],
+    "skills": ["Figma", "UI Design", "Graphic Design", "Illustrator", "Photoshop", "After Effects"]
+  },
+  {
+    "id": "job-17",
+    "employerId": "emp-demo",
+    "title": "Associate Product Manager",
+    "companyName": "VentureCap Incubator",
+    "companyLogo": "https://images.unsplash.com/photo-1557683316-973673baf926?w=100&h=100&fit=crop&q=80",
+    "salaryRange": "$85,000 - $105,000",
+    "salaryMin": 85000,
+    "salaryMax": 105000,
+    "location": "Onsite (Boston, MA)",
+    "type": "Full-time",
+    "category": "Product Management",
+    "postedDate": "2026-06-05T09:15:00.000Z",
+    "pinned": false,
+    "description": "Assist our Product Lead in coordinating feature releases, tracking user analytics, and mapping requirements. Conduct customer feedback calls and summarize suggestions. Coordinate Scrum tickets and write bug summaries for the tech team.",
+    "requirements": [
+      "1-2 years of experience in product management support, analytics, or QA engineering.",
+      "Experience using Jira, Confluence, and analytics tools like Amplitude/Google Analytics.",
+      "Excellent organization, writing skills, and proactive learning attitude.",
+      "Degree in Business, Tech, or equivalent professional background."
+    ],
+    "responsibilities": [
+      "Organize Scrum backlog tickets and coordinate sprint retrospectives.",
+      "Analyze user event drop-offs and generate product metric sheets.",
+      "Conduct user feedback calls and compile feature request boards.",
+      "Verify published feature updates and coordinate release notes."
+    ],
+    "skills": ["Agile", "Scrum", "Jira", "Amplitude", "Google Analytics", "Confluence", "QA"]
+  },
+  {
+    "id": "job-18",
+    "employerId": "emp-demo",
+    "title": "Technical Product Manager (PM)",
+    "companyName": "AI-Analytics Corp",
+    "companyLogo": "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?w=100&h=100&fit=crop&q=80",
+    "salaryRange": "$145,000 - $175,000",
+    "salaryMin": 145000,
+    "salaryMax": 175000,
+    "location": "Remote",
+    "type": "Contract",
+    "category": "Product Management",
+    "postedDate": "2026-06-04T12:00:00.000Z",
+    "pinned": false,
+    "description": "Lead the product specifications of our enterprise machine learning API layers. Translate complex machine learning configurations into structured technical requirements for our engineering squad. Work closely with data engineers on pipeline constraints and release timing.",
+    "requirements": [
+      "3+ years as a Technical Product Manager or Systems Architect.",
+      "Solid technical background, e.g. software engineer or data developer role in the past.",
+      "Experience specifying APIs, webhooks, and complex microservice data schemas.",
+      "Familiarity with Agile practices and leading cross-functional squads."
+    ],
+    "responsibilities": [
+      "Draft detailed API specs and sequence flows for developer groups.",
+      "Define backlog priorities and manage engineering Scrum pipelines.",
+      "Align database scaling requirements and manage release timings.",
+      "Support enterprise client onboarding and technical queries."
+    ],
+    "skills": ["Product Strategy", "Agile", "Jira", "APIs", "Microservices", "Docker", "Agile Product Management"]
+  }
+]

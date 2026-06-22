@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | CareerGo Quizzes</title>
+  <meta name="description" content="Manage your custom quizzes, check attempt history logs, inspect overall scoring ratios, and unlock badges on CareerGo.">
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body class="auth-required">
+
+  <!-- HEADER NAVBAR -->
+  <header>
+    <div class="container nav-container">
+      <a href="index.html" class="logo-wrapper">
+        <div class="logo-icon">⚡</div>
+        <span>CareerGo<span style="color: var(--text-main);">Quizzes</span></span>
+      </a>
+      
+      <nav class="nav-menu" id="nav-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="browse.html" class="nav-link">Browse Quizzes</a>
+        <a href="create.html" class="nav-link">Create Quiz</a>
+        <a href="dashboard.html" class="nav-link active">Dashboard</a>
+      </nav>
+
+      <div class="nav-actions" id="nav-actions">
+        <button class="btn-icon">🌓</button>
+      </div>
+
+      <div class="mobile-nav-toggle" id="mobile-nav-toggle">☰</div>
+    </div>
+  </header>
+
+  <!-- DASHBOARD MAIN PANEL LAYOUT -->
+  <main class="container section-padding" style="padding-top: 40px;" id="dashboard-layout-container">
+    <div>
+      <h1 style="font-size: 2.5rem; font-weight: 800;">Candidate Dashboard</h1>
+      <p class="text-muted">Analyze quiz solutions, inspect performance analytics, and manage assessments.</p>
+    </div>
+
+    <div class="dashboard-layout">
+      <!-- SIDEBAR PROFILE & TAB NAVS -->
+      <aside class="dashboard-sidebar">
+        <!-- User Profile Card -->
+        <div class="profile-card">
+          <div class="profile-avatar-large" id="profile-avatar">U</div>
+          <h3 class="profile-name" id="profile-name">Candidate Name</h3>
+          <span class="profile-joined" id="profile-joined">Joined June 2026</span>
+          
+          <!-- Badges showcase wrapper -->
+          <div class="badges-container" id="badges-box">
+            <!-- Rendered dynamically by dashboard.js -->
+          </div>
+        </div>
+
+        <!-- Sidebar Navigation Buttons -->
+        <div class="sidebar-menu">
+          <button class="sidebar-menu-btn active" data-tab="tab-created">👤 My Quizzes</button>
+          <button class="sidebar-menu-btn" data-tab="tab-history">🎮 Attempts History</button>
+          <button class="sidebar-menu-btn" data-tab="tab-stats">📊 Overall Statistics</button>
+        </div>
+      </aside>
+
+      <!-- CONTENT PANELS GRID -->
+      <section class="dashboard-content">
+        <!-- 1. Stats Counter Cards Grid -->
+        <div class="stats-cards-grid">
+          <div class="dashboard-stat-card">
+            <div class="stat-icon-wrapper yellow">👑</div>
+            <div class="dashboard-stat-info">
+              <span class="dashboard-stat-value" id="created-count-value">0</span>
+              <span class="dashboard-stat-label">Quizzes Created</span>
+            </div>
+          </div>
+          <div class="dashboard-stat-card">
+            <div class="stat-icon-wrapper">🎮</div>
+            <div class="dashboard-stat-info">
+              <span class="dashboard-stat-value" id="taken-count-value">0</span>
+              <span class="dashboard-stat-label">Quizzes Attempted</span>
+            </div>
+          </div>
+          <div class="dashboard-stat-card">
+            <div class="stat-icon-wrapper green">🎯</div>
+            <div class="dashboard-stat-info">
+              <span class="dashboard-stat-value" id="avg-score-value">0%</span>
+              <span class="dashboard-stat-label">Average Score</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. TAB PANE: MY QUIZZES -->
+        <div class="tab-pane active" id="tab-created">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+            <h3 style="font-size: 1.25rem;">Quizzes You Created</h3>
+            <a href="create.html" class="btn btn-primary btn-sm">➕ Create New Quiz</a>
+          </div>
+          <div class="table-container">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th style="width: 60px;">#</th>
+                  <th>Quiz Title</th>
+                  <th>Category</th>
+                  <th>Plays</th>
+                  <th>Avg Rating</th>
+                  <th style="width: 120px;">Actions</th>
+                </tr>
+              </thead>
+              <tbody id="my-quizzes-table-body">
+                <!-- Rendered dynamically by dashboard.js -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- 3. TAB PANE: ATTEMPTS HISTORY -->
+        <div class="tab-pane" id="tab-history">
+          <div style="margin-bottom: 16px;">
+            <h3 style="font-size: 1.25rem;">Your Attempts History</h3>
+          </div>
+          <div class="table-container">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th style="width: 60px;">#</th>
+                  <th>Quiz Title</th>
+                  <th>Score Percentage</th>
+                  <th>Date Attempted</th>
+                  <th style="width: 180px;">Actions</th>
+                </tr>
+              </thead>
+              <tbody id="history-table-body">
+                <!-- Rendered dynamically by dashboard.js -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- 4. TAB PANE: OVERALL METRICS -->
+        <div class="tab-pane" id="tab-stats">
+          <div id="tab-stats-inner">
+            <!-- Loaded dynamically by dashboard.js -->
+          </div>
+        </div>
+
+      </section>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <a href="index.html" class="logo-wrapper footer-logo">
+          <div class="logo-icon">⚡</div>
+          <span>CareerGo<span style="color: white;">Quizzes</span></span>
+        </a>
+        <p class="footer-desc">
+          CareerGo Quizzes is a modern interactive trivia platform for testing candidates, studying materials, or simply competing with peers.
+        </p>
+        <div class="social-links">
+          <a href="#" class="social-btn">🌐</a>
+          <a href="#" class="social-btn">🐦</a>
+          <a href="#" class="social-btn">🐙</a>
+        </div>
+      </div>
+      
+      <div>
+        <h4 class="footer-title">Platform</h4>
+        <ul class="footer-links">
+          <li><a href="browse.html">Browse Quizzes</a></li>
+          <li><a href="create.html">Create Quiz</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-title">Categories</h4>
+        <ul class="footer-links">
+          <li><a href="browse.html?category=Tech">Tech / Programming</a></li>
+          <li><a href="browse.html?category=Science">Science & Space</a></li>
+          <li><a href="browse.html?category=History">World History</a></li>
+          <li><a href="browse.html?category=General">General Knowledge</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-title">Stay Updated</h4>
+        <p class="footer-desc" style="font-size: 0.85rem; margin-bottom: 16px;">Subscribe to receive newsletter alerts about new quizzes and feature upgrades.</p>
+        <form class="newsletter-form" onsubmit="event.preventDefault(); window.showToast('Subscribed successfully!', 'success');">
+          <input type="email" placeholder="Your email address" class="newsletter-input" required>
+          <button type="submit" class="newsletter-btn">Join</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        &copy; 2026 CareerGo Quizzes. Built with Antigravity for modern web evaluation.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/app.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

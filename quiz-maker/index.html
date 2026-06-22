@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CareerGo Quizzes | Create, Share & Conquer Quizzes</title>
+  <meta name="description" content="Explore challenging quizzes, test your expertise, or design customized knowledge tests to share with colleagues and candidates on CareerGo.">
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- HEADER NAVBAR -->
+  <header>
+    <div class="container nav-container">
+      <a href="index.html" class="logo-wrapper">
+        <div class="logo-icon">⚡</div>
+        <span>CareerGo<span style="color: var(--text-main);">Quizzes</span></span>
+      </a>
+      
+      <nav class="nav-menu" id="nav-menu">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="browse.html" class="nav-link">Browse Quizzes</a>
+        <a href="create.html" class="nav-link">Create Quiz</a>
+        <a href="dashboard.html" class="nav-link">Dashboard</a>
+      </nav>
+
+      <div class="nav-actions" id="nav-actions">
+        <!-- Rendered dynamically by app.js -->
+        <button class="btn-icon">🌓</button>
+      </div>
+
+      <div class="mobile-nav-toggle" id="mobile-nav-toggle">☰</div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero-section">
+    <div class="container hero-content">
+      <span class="hero-tag">🧠 Elevate Your Mind</span>
+      <h1>Create, Share & <span>Conquer Quizzes</span></h1>
+      <p class="hero-subtitle">
+        Join the ultimate hub for trivia masters, developers, and educators. Search thousands of pre-made topics or craft custom assessments in minutes.
+      </p>
+
+      <!-- Hero Quick Search -->
+      <div style="max-width: 550px; margin: 0 auto 40px; position: relative;">
+        <form id="hero-search-form" style="display: flex; gap: 10px; background-color: var(--surface); border: 1px solid var(--border); padding: 8px 12px; border-radius: var(--radius-lg); box-shadow: var(--shadow-xl);">
+          <input type="text" id="hero-search-input" placeholder="Search quizzes (e.g., Web Dev, History)..." style="flex-grow: 1; padding: 12px 16px; font-size: 1rem; border: none; background: none; outline: none; color: var(--text-main);">
+          <button type="submit" class="btn btn-primary" style="padding: 10px 24px;">Search</button>
+        </form>
+      </div>
+
+      <div class="hero-btn-group">
+        <a href="create.html" class="btn btn-primary">Create a Quiz</a>
+        <a href="browse.html" class="btn btn-secondary">Browse Quizzes</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATISTICS SECTION -->
+  <section class="stats-section">
+    <div class="container stats-grid">
+      <div class="stat-card">
+        <div class="stat-number">1.2k+</div>
+        <div class="stat-label">Total Quizzes</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">5k+</div>
+        <div class="stat-label">Active Creators</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">200k+</div>
+        <div class="stat-label">Answers Submitted</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED QUIZZES -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="section-header">
+        <h2>Featured Quizzes</h2>
+        <p>Handpicked challenges across tech, science, and history to test your knowledge.</p>
+      </div>
+
+      <div class="quizzes-grid" id="featured-quizzes-grid">
+        <!-- Rendered dynamically by JavaScript or fallback skeleton -->
+        <div style="grid-column: 1 / -1; display: flex; justify-content: center; padding: 40px 0;">
+          <div class="loading-shimmer" style="width: 100%; height: 200px; border-radius: var(--radius-md);"></div>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 50px;">
+        <a href="browse.html" class="btn btn-outline">Explore All Quizzes</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS SECTION (PREMIUM ADDITION) -->
+  <section class="section-padding" style="background-color: var(--surface); border-top: 1px solid var(--border);">
+    <div class="container">
+      <div class="section-header">
+        <h2>How It Works</h2>
+        <p>Assess candidate competencies or share trivia challenges in three easy steps.</p>
+      </div>
+
+      <div class="grid" style="grid-template-columns: repeat(3, 1fr); gap: 40px; text-align: center;">
+        <div style="padding: 24px;">
+          <div style="font-size: 3rem; margin-bottom: 20px;">✍️</div>
+          <h3 style="margin-bottom: 12px;">1. Design</h3>
+          <p class="text-muted" style="font-size: 0.95rem; line-height: 1.6;">Use our step-by-step creation wizard to write questions, define correct keys, set timers, and append explanations.</p>
+        </div>
+        <div style="padding: 24px;">
+          <div style="font-size: 3rem; margin-bottom: 20px;">🔗</div>
+          <h3 style="margin-bottom: 12px;">2. Share</h3>
+          <p class="text-muted" style="font-size: 0.95rem; line-height: 1.6;">Publish your quiz to receive a unique code or shareable link. Distribute to friends, students, or job applicants.</p>
+        </div>
+        <div style="padding: 24px;">
+          <div style="font-size: 3rem; margin-bottom: 20px;">📈</div>
+          <h3 style="margin-bottom: 12px;">3. Analyze</h3>
+          <p class="text-muted" style="font-size: 0.95rem; line-height: 1.6;">Review detailed attempt statistics, solve ratios, average scoring percentages, and track progress history on your dashboard.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <a href="index.html" class="logo-wrapper footer-logo">
+          <div class="logo-icon">⚡</div>
+          <span>CareerGo<span style="color: white;">Quizzes</span></span>
+        </a>
+        <p class="footer-desc">
+          CareerGo Quizzes is a modern interactive trivia platform for testing candidates, studying materials, or simply competing with peers.
+        </p>
+        <div class="social-links">
+          <a href="#" class="social-btn" title="Facebook">🌐</a>
+          <a href="#" class="social-btn" title="Twitter">🐦</a>
+          <a href="#" class="social-btn" title="GitHub">🐙</a>
+        </div>
+      </div>
+      
+      <div>
+        <h4 class="footer-title">Platform</h4>
+        <ul class="footer-links">
+          <li><a href="browse.html">Browse Quizzes</a></li>
+          <li><a href="create.html">Create Quiz</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-title">Categories</h4>
+        <ul class="footer-links">
+          <li><a href="browse.html?category=Tech">Tech / Programming</a></li>
+          <li><a href="browse.html?category=Science">Science & Space</a></li>
+          <li><a href="browse.html?category=History">World History</a></li>
+          <li><a href="browse.html?category=General">General Knowledge</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-title">Stay Updated</h4>
+        <p class="footer-desc" style="font-size: 0.85rem; margin-bottom: 16px;">Subscribe to receive newsletter alerts about new quizzes and feature upgrades.</p>
+        <form class="newsletter-form" onsubmit="event.preventDefault(); window.showToast('Subscribed successfully!', 'success');">
+          <input type="email" placeholder="Your email address" class="newsletter-input" required>
+          <button type="submit" class="newsletter-btn">Join</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        &copy; 2026 CareerGo Quizzes. Built with Antigravity for modern web evaluation.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/app.js"></script>
+  <script>
+    // Page-specific Logic
+    document.addEventListener('DOMContentLoaded', () => {
+      if (window.AppState.isLoaded) {
+        renderFeatured();
+      } else {
+        document.addEventListener('appDataLoaded', renderFeatured);
+      }
+
+      // Search redirect
+      const searchForm = document.getElementById('hero-search-form');
+      if (searchForm) {
+        searchForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const query = document.getElementById('hero-search-input').value.trim();
+          if (query) {
+            window.location.href = `browse.html?search=${encodeURIComponent(query)}`;
+          } else {
+            window.location.href = 'browse.html';
+          }
+        });
+      }
+    });
+
+    function renderFeatured() {
+      const grid = document.getElementById('featured-quizzes-grid');
+      if (!grid) return;
+
+      // Filter featured quizzes
+      const featured = window.AppState.quizzes.filter(q => q.featured === true).slice(0, 3);
+      
+      // Fallback: if no featured quizzes are marked, take first 3
+      const list = featured.length > 0 ? featured : window.AppState.quizzes.slice(0, 3);
+
+      if (list.length === 0) {
+        grid.innerHTML = `<div style="grid-column: 1/-1; text-align: center;">No quizzes available right now.</div>`;
+        return;
+      }
+
+      grid.innerHTML = list.map(quiz => {
+        const diffClass = quiz.difficulty === 'Easy' ? 'badge-secondary' : quiz.difficulty === 'Medium' ? 'badge-warning' : 'badge-danger';
+        const creatorInitials = quiz.creatorName ? quiz.creatorName.split(' ').map(n => n[0]).join('').toUpperCase().substring(0, 2) : 'A';
+        const creatorColor = quiz.creatorId === 'admin' ? '#7c3aed' : '#10b981';
+
+        return `
+          <div class="quiz-card featured-pinned" style="position: relative;">
+            <span class="badge badge-primary" style="position: absolute; top: 16px; right: 16px;">Featured</span>
+            <div class="quiz-card-header">
+              <div class="quiz-thumbnail" style="background-color: ${quiz.thumbnailColor}15; color: ${quiz.thumbnailColor}">
+                ${quiz.thumbnailEmoji || '🧠'}
+              </div>
+              <span class="badge ${diffClass}">${quiz.difficulty}</span>
+            </div>
+            <h3 class="quiz-card-title">${quiz.title}</h3>
+            <p class="quiz-card-desc">${quiz.description}</p>
+            <div class="quiz-meta-info">
+              <span>📂 ${quiz.category}</span>
+              <span>❓ ${quiz.questions.length} Questions</span>
+              <span>🔥 ${quiz.playsCount || 0} plays</span>
+            </div>
+            <div class="quiz-card-footer">
+              <div class="quiz-creator-bubble" title="Created by ${quiz.creatorName}">
+                <div class="creator-avatar-mini" style="background-color: ${creatorColor}">
+                  ${creatorInitials}
+                </div>
+                <span class="text-muted" style="font-weight: 500;">By ${quiz.creatorName}</span>
+              </div>
+              <a href="take.html?id=${quiz.id}" class="btn btn-primary btn-sm">Take Quiz</a>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+  </script>
+</body>
+</html>

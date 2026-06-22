@@ -1,0 +1,18 @@
+{
+  "name": "careergo-quizzes",
+  "version": "1.0.0",
+  "description": "A fully functional, premium Online Quiz Maker platform built with HTML5, CSS3, and JavaScript.",
+  "scripts": {
+    "start": "npx -y http-server ./ -p 3000",
+    "dev": "npx -y http-server ./ -p 3000"
+  },
+  "keywords": [
+    "quiz",
+    "maker",
+    "education",
+    "learning",
+    "assessment"
+  ],
+  "author": "CareerGo Team",
+  "license": "MIT"
+}

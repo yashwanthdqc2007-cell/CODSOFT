@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Browse Jobs | CareerGo Job Board</title>
+  <meta name="description" content="Filter and search through thousands of tech and management opportunities. Refine by location, salary range, category, and job types.">
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* Specific styling for jobs listing layout */
+    .jobs-page-container {
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 30px;
+      padding: 40px 0;
+    }
+    
+    /* Filters Sidebar */
+    .filters-sidebar {
+      background-color: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 24px;
+      box-shadow: var(--shadow-sm);
+      height: fit-content;
+      position: sticky;
+      top: 100px;
+    }
+    .filter-section {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+    }
+    .filter-section:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+      margin-bottom: 0;
+    }
+    .filter-title {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .checkbox-group {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .checkbox-label {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.95rem;
+      cursor: pointer;
+    }
+    .checkbox-label input {
+      width: 18px;
+      height: 18px;
+      accent-color: var(--primary);
+      cursor: pointer;
+    }
+    
+    /* Tag Cloud Styles */
+    .tag-cloud-sidebar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .skill-tag-btn {
+      background-color: var(--neutral-100);
+      color: var(--neutral-700);
+      border: 1px solid var(--border);
+      padding: 6px 12px;
+      border-radius: var(--radius-sm);
+      font-size: 0.8rem;
+      font-weight: 600;
+      transition: all var(--transition-fast);
+    }
+    [data-theme="dark"] .skill-tag-btn {
+      background-color: var(--neutral-800);
+      color: var(--neutral-300);
+    }
+    .skill-tag-btn:hover {
+      background-color: var(--primary-light);
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+    .skill-tag-btn.active {
+      background-color: var(--primary);
+      border-color: var(--primary);
+      color: white;
+    }
+    
+    /* Active Filters Bar */
+    .active-filters-bar {
+      background-color: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 16px 20px;
+      margin-bottom: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      box-shadow: var(--shadow-sm);
+    }
+    .active-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .filter-tag {
+      background-color: var(--neutral-100);
+      color: var(--text-main);
+      padding: 6px 12px;
+      border-radius: var(--radius-sm);
+      font-size: 0.82rem;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      border: 1px solid var(--border);
+    }
+    [data-theme="dark"] .filter-tag {
+      background-color: var(--neutral-800);
+    }
+    .filter-tag i {
+      cursor: pointer;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+    .filter-tag i:hover {
+      color: var(--danger);
+    }
+    
+    /* Listing Header */
+    .listings-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 24px;
+    }
+    .results-count {
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+    .sort-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.92rem;
+    }
+    .sort-select {
+      background-color: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 8px 12px;
+      font-weight: 600;
+      outline: none;
+    }
+
+    /* Pinned / Premium Job styling */
+    .job-card.pinned-premium {
+      border: 2px solid var(--primary);
+      background: linear-gradient(to right, var(--primary-light), var(--surface) 15%);
+      box-shadow: var(--shadow-md);
+    }
+    [data-theme="dark"] .job-card.pinned-premium {
+      background: linear-gradient(to right, rgba(79, 70, 229, 0.1), var(--surface) 15%);
+    }
+
+    @media (max-width: 992px) {
+      .jobs-page-container {
+        grid-template-columns: 1fr;
+      }
+      .filters-sidebar {
+        position: static;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container nav-container">
+      <!-- Generated by app.js -->
+    </div>
+  </header>
+
+  <!-- Page Main Content -->
+  <main class="container">
+    <div class="jobs-page-container">
+      
+      <!-- Left Filters Sidebar -->
+      <aside class="filters-sidebar">
+        <div class="filter-section">
+          <div class="filter-title">
+            <span>Filter Search</span>
+            <button onclick="clearAllFilters()" class="text-muted" style="font-size: 0.8rem; font-weight: 600; text-decoration: underline;">Clear All</button>
+          </div>
+          <div class="form-group" style="margin-bottom: 12px;">
+            <label for="filterKeyword">Job Title / Keyword</label>
+            <input type="text" id="filterKeyword" class="form-control" placeholder="Search title or keyword...">
+          </div>
+          <div class="form-group" style="margin-bottom: 0;">
+            <label for="filterCompany">Company Name</label>
+            <input type="text" id="filterCompany" class="form-control" placeholder="Search company...">
+          </div>
+        </div>
+
+        <div class="filter-section">
+          <div class="form-group" style="margin-bottom: 0;">
+            <label for="filterLocation">Location</label>
+            <input type="text" id="filterLocation" class="form-control" placeholder="e.g. Remote, Hybrid, Onsite...">
+          </div>
+        </div>
+
+        <div class="filter-section">
+          <div class="form-group" style="margin-bottom: 0;">
+            <label for="filterCategory">Job Category</label>
+            <select id="filterCategory" class="form-control">
+              <option value="">All Categories</option>
+              <option value="Frontend Development">Frontend Development</option>
+              <option value="Backend Development">Backend Development</option>
+              <option value="Full Stack">Full Stack</option>
+              <option value="DevOps/Cloud">DevOps/Cloud</option>
+              <option value="UI/UX Design">UI/UX Design</option>
+              <option value="Product Management">Product Management</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="filter-section">
+          <div class="filter-title">Job Type</div>
+          <div class="checkbox-group">
+            <label class="checkbox-label">
+              <input type="checkbox" name="jobType" value="Full-time"> Full-time
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" name="jobType" value="Part-time"> Part-time
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" name="jobType" value="Contract"> Contract
+            </label>
+          </div>
+        </div>
+
+        <div class="filter-section">
+          <div class="filter-title">Popular Skills</div>
+          <div class="tag-cloud-sidebar" id="sidebarSkillsContainer">
+            <!-- Rendered dynamically by jobs.js -->
+          </div>
+        </div>
+
+        <div class="filter-section">
+          <div class="filter-title">Min Annual Salary</div>
+          <div class="form-group" style="margin-bottom: 8px;">
+            <input type="range" id="filterSalary" min="0" max="200000" step="10000" value="0" class="form-control" style="padding: 0; cursor: pointer;">
+          </div>
+          <div class="flex justify-between font-semibold" style="font-size: 0.85rem; color: var(--primary);">
+            <span>$0</span>
+            <span id="salaryVal">$0</span>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Right Listings Grid -->
+      <section>
+        <!-- Active Filters Display Panel -->
+        <div class="active-filters-bar" id="activeFiltersPanel" style="display: none;">
+          <div class="active-tags" id="activeTagsContainer">
+            <!-- Dynamic tags -->
+          </div>
+          <button onclick="clearAllFilters()" class="btn btn-secondary btn-sm" style="padding: 6px 12px;">Clear All</button>
+        </div>
+
+        <!-- Listings Filter Sorting Header -->
+        <div class="listings-header">
+          <div class="results-count" id="resultsCount">Loading jobs...</div>
+          <div class="sort-wrapper">
+            <span class="text-muted">Sort By:</span>
+            <select class="sort-select" id="sortSelect">
+              <option value="relevance">Relevance (Featured)</option>
+              <option value="newest">Newest First</option>
+              <option value="highest-salary">Highest Salary</option>
+              <option value="lowest-salary">Lowest Salary</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Jobs Card Container Grid -->
+        <div class="jobs-grid" id="listingsContainer" style="grid-template-columns: 1fr; gap: 20px;">
+          <!-- Rendered dynamically by jobs.js -->
+        </div>
+
+        <!-- Pagination Sim -->
+        <div class="text-center" style="margin-top: 40px; display: none;" id="paginationBox">
+          <button class="btn btn-outline" id="loadMoreBtn">Load More Jobs</button>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <div class="logo-wrapper footer-logo">
+          <div class="logo-icon">
+            <i class="fas fa-briefcase"></i>
+          </div>
+          <span>CareerGo</span>
+        </div>
+        <p class="footer-desc">CareerGo connects passionate professionals with top employers globally. Apply easily and grow dynamically.</p>
+        <div class="social-links">
+          <a href="#" class="social-btn"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-btn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="social-btn"><i class="fab fa-github"></i></a>
+          <a href="#" class="social-btn"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      <div>
+        <h4 class="footer-title">For Candidates</h4>
+        <ul class="footer-links">
+          <li><a href="jobs.html">Browse Jobs</a></li>
+          <li><a href="candidate-dashboard.html">Candidate Dashboard</a></li>
+          <li><a href="candidate-dashboard.html?tab=resume">Build Resume</a></li>
+          <li><a href="candidate-dashboard.html?tab=bookmarks">Saved Jobs</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-title">For Employers</h4>
+        <ul class="footer-links">
+          <li><a href="employer-dashboard.html">Employer Dashboard</a></li>
+          <li><a href="employer-dashboard.html?tab=post-job">Post a Job</a></li>
+          <li><a href="employer-dashboard.html?tab=jobs">Manage Listings</a></li>
+          <li><a href="employer-dashboard.html?tab=applicants">View Applicants</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-title">Get Newsletter</h4>
+        <p class="footer-desc" style="margin-bottom: 12px;">Subscribe to receive fresh jobs directly in your inbox.</p>
+        <form class="newsletter-form">
+          <input type="email" class="newsletter-input" placeholder="Your email address" required>
+          <button type="submit" class="newsletter-btn"><i class="fas fa-paper-plane"></i></button>
+        </form>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      &copy; 2026 CareerGo Inc. All rights reserved. Crafted with care as a premium portfolio project.
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/app.js"></script>
+  <script src="js/jobs.js"></script>
+</body>
+</html>
